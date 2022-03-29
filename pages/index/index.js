@@ -1,4 +1,4 @@
-// pages/fitst/first.js
+﻿// pages/fitst/first.js
 Page({
 
     /**
@@ -6,7 +6,7 @@ Page({
      */
     data: {
       navData:[
-        {text: '首页'},{text: '超级爆品'},{text: '细莫王牌'},{ text: '时代包包'},{text: '细莫果园'},{text: '细莫海鲜'},
+        {text: '首页'},{text: '超级爆品'},{text: '细莫王牌'},{ text: '精品女包'},{text: '细莫果园'},{text: '细莫海鲜'},
         {text: '细莫坚果'},{text: '陈克明'},{text: 'Swisse'},{ text: '食品零食'},{text: '水果生鲜'},{text: '健康养颜'},
         {text: '美妆护肤'},{text: '日用百货'},{text: '鞋帽服饰'},{ text: '珠宝饰品'},{text: '生活家电'},{text: '童装母婴'},
     ],
