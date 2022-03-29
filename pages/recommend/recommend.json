@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "yanXuan":"/components/yanXuan/yanXuan"
+  },
+  "navigationBarTitleText": "种草专区",
+  "navigationBarTextStyle": "white"
+}

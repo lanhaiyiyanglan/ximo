@@ -1,0 +1,41 @@
+<view class='view-page'>
+                <navbar bindmyevent="closePrice"></navbar>
+                <view class='page-content'>
+                    <view class="fixTop" style='top:{{navH}}px'>
+                        <view class="search">
+                            <view class="search_arr">
+                            <icon class="searchcion" type='search'></icon>
+                            <input class="sousuo"  placeholder="搜索您想要的商品"/>
+                            </view>
+                        </view>
+                           <!-- tab导航栏 -->
+                        <!-- scroll-left属性可以控制滚动条位置 -->
+                        <!-- scroll-with-animation滚动添加动画过渡 -->
+                        <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+                            <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+                                <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+                            </block>        
+                        </scroll-view>
+                        <image src="../../images/moreSelect.png" class="moreSelect" bindtap="showTab"></image>
+                    </view>
+                    <view class="ulBox" wx:if="{{showTab}}" style='top:{{navH+85}}px'>
+                            <view class="ulTag">
+                                    <view class="liTag">
+                                    <view class="liBox" wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+                                        <view class="items {{currentTab == idx ?'itemsActive':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                    </view>
+                    <!-- 页面内容 -->
+                    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+                            <swiper-item  class="tab-content">
+                                <firstPage bindtoMore="toMore" flag="{{flag}}"></firstPage>
+                            </swiper-item>
+                            <swiper-item  class="tab-content">
+                                
+                            </swiper-item>
+                    </swiper>
+                </view>
+    </view>                          
+

@@ -1,0 +1,5 @@
+
+<view class="navbar" style='height:{{navH}}px'>
+  <image src="../../images/topLogo.png" class="topLogo"></image>
+  <image src="../../images/eye.png" class="topEye" bindtap="closePrice"></image>
+</view>

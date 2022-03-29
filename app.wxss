@@ -1,0 +1,12 @@
+@font-face{
+  font-family:'SourceHanSansCN-Medium';
+  src:url('https://static.ximogo.com/mini/fonts/SourceHanSansCN-Medium.ttf');
+}
+@font-face{
+  font-family: 'SourceHanSansCN-Normal';
+  src:url('https://static.ximogo.com/mini/fonts/SourceHanSansCN-Normal.otf')
+}
+@font-face{
+  font-family:'SourceHanSansCN-Bold';
+  src: url('https://static.ximogo.com/mini/fonts/SourceHanSansCN-Bold.otf');
+}

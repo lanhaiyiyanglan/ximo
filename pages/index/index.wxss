@@ -1,0 +1,98 @@
+/**index.wxss**/
+page{height: 100%;width:100%;}
+.view-page {
+  height:100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+}
+.page-content{
+  width: 100%;
+  height: 100%;
+  font-family: 'SourceHanSansCN-Normal';
+}
+.fixTop{position:fixed;z-index:222222;width:100%;height:auto;left:0;}
+.search{
+  width:100%;
+  background:#d2cdff;
+  padding-bottom:10rpx;
+  padding-top:20rpx;
+}
+.search_arr {
+  border: 1px solid #ffffff;
+  border-radius: 20rpx;
+  margin:0 auto;
+  width:95%;
+  background:#ffffff;
+}
+.sousuo {
+  padding-left:25%;
+  width:50%;
+  height: 60rpx;
+  text-align: center;
+  font-size:30rpx;
+}
+.searchcion {
+  margin:8rpx 10rpx;
+  position: absolute;
+  margin-left:24%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+ }
+ .nav {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #d2cdff;
+  font-size: 30rpx;
+  white-space: nowrap;
+  padding-right:10%;
+  box-sizing: border-box;
+}
+.nav-item {
+  display: inline-block;
+  text-align: center;
+  color:#ffffff;
+  width:20%;
+}
+.nav-item.active{
+  font-weight:bolder;
+  font-size:32rpx;
+}
+.tab-box{
+  padding: 170rpx 0 130rpx 0;
+  height: 100%;
+  box-sizing: border-box;
+  width:100%;margin:0 auto;
+}
+.tab-box .tab-content{
+  overflow-y: scroll;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  box-sizing: border-box;
+}
+.tab-box .tab-content:first-child{padding-left:0;padding-right:0;}
+
+.go_top{
+  position: fixed;
+  bottom: 70px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  z-index:99999999;
+}
+
+.moreSelect{position: relative;width:30rpx;height:30rpx;float:right;margin-top:-54rpx;margin-right:15rpx;}
+.ulBox{position: absolute;height:100%;background:rgba(0,0,0,0.5);width:100%;z-index:2;}
+.ulTag{width:100%;min-height: 100rpx;overflow: hidden;border-bottom-left-radius: 20rpx;border-bottom-right-radius: 20rpx;background:#ffffff;padding-bottom:20rpx;}
+.liTag{display:flex;align-items: center;justify-content:space-around;flex-wrap: wrap;align-content:center;}
+.liBox{width:28%;text-align: center;margin:15rpx 0;}
+.items{border-radius:25rpx;background:#f0f0f0;height:50rpx;line-height:50rpx;font-size:22rpx;color:#221815;}
+.itemsActive{border:2rpx solid #d2cdff;background:#e1e6ff;}

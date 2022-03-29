@@ -1,0 +1,9 @@
+.yxTop{padding:40rpx 0 35rpx 0;position:fixed;top:0rpx;width:100%;background:#ffffff;z-index:9999;}
+.xmyx{display: block;width:207rpx;height: 84rpx;margin:0 auto;margin-bottom:40rpx;}
+.swiper-tab{width: 100%;display: flex;flex-flow: row;justify-content: space-between;align-items: center;}
+.swiper-tab-item{width: 30%; text-align: center;color:#a9a7a6; font-family: "SourceHanSansCN-Medium";font-size:24rpx;}
+.swiper-tab-item image{display: block;width:59rpx;height: 59rpx;margin:0 auto;margin-bottom:15rpx;}
+.swiper-tab-item .yxTxt{display:inline-block;}
+.active{color:#221815;}
+.active  .yxTxt{border-bottom: 8rpx solid #ffb400;}
+.mainSwiper{background:#f2f2f2;height:100vh;overflow-y:scroll;padding:330rpx 20rpx 20rpx 20rpx;}

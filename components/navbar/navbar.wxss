@@ -1,0 +1,12 @@
+/* components/navbar/index.wxss */
+.navbar {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color:#d2cdff;
+}
+.topLogo{position: absolute;width:293rpx;height:35rpx;left:30rpx;bottom:20rpx;}
+.topEye{width:54rpx;height:30rpx;position: absolute;bottom:22rpx;left:470rpx;}

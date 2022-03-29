@@ -1,0 +1,116 @@
+<!--components/pingTuan/pingTuan.wxml-->
+<scroll-view class="scrollDiv" scroll-y="true" style="height:{{scrollHeight}}" bindscroll="onPageScroll" scroll-top='{{ topNum }}'>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      circular="{{circular}}"
+      vertical="{{vertical}}"
+      previous-margin="{{previousMargin}}px"
+      next-margin="{{nextMargin}}px"
+      class="swiperBox"
+    >
+    <block wx:for="{{banners}}">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill" class="swiper-item-images" />
+      </swiper-item>
+    </block>
+    </swiper>
+    <view class="warpperBox">
+        <image src="../../images/tuanZp.png" class="tuanZp" mode="heightFix"></image>
+        <image src="../../images/enter.png" class="enter"></image>
+    </view>
+    <view class="warpperBox">
+      <view class="itemLi">
+        <block  wx:for="{{itemList}}" wx:key="idx" wx:for-index="idx">
+          <image src="{{item}}" class="itemImg" data-current="{{idx}}" bindtap="itemTo"></image>
+        </block>
+      </view>
+    </view>
+    <view class="warpperBox warpperBox2">
+      <view class="fourItem">
+         <block wx:for="{{fourItem}}">
+               <view class="fourBox">
+                    <image src="{{item.title}}" class="fourTitle" mode="heightFix"></image>
+                    <image src="{{item.image}}"  class="fourImg" mode="heightFix"></image>
+               </view>
+         </block>
+      </view>
+    </view>
+    <view class="warpperBox wpzC">
+        <image src="../../images/wpZc.png" class="tuanZp" mode="heightFix"></image>
+        <image src="../../images/enter.png" class="enter"></image>
+    </view>
+    <view class="newBox">
+       <image src="../../images/todayNew.png" class="todayNew" mode="heightFix"></image>
+       <view class="newUl">
+          <block wx:for="{{newPd}}">
+             <view class="newLi">
+              <image src="{{item.newImg}}" mode="heightFix" class="newImg"></image>
+              <view class="newTxt">{{item.newTxt}}</view>
+              <view class="newPrice">
+                 <text class="price">¥</text>
+                 {{item.newPrice}}
+              </view>
+             </view>
+          </block>
+          <image class="share" src="../../images/share.png"></image>
+       </view>
+    </view>
+    <view class="warpperBox">
+        <image src="../../images/ppHc.png" class="tuanZp" mode="heightFix"></image>
+        <image src="../../images/dontMt.png" class="dontMt" mode="heightFix"></image>
+    </view> 
+    <view class="warpperBox warpperBox2">
+      <view wx:for="{{pdList}}" wx:key="index" wx:for-index="index" class="pdList">
+               <view class="brandBox">
+                  <view class="brandInfo">
+                      <view class="brandImgBox">
+                        <image src="{{item.brandImg}}" class="brandImg"></image>
+                      </view>
+                      <view class="brandDetail">
+                         <view class="brandName">{{item.brandName}}</view>
+                         <view class="brandTxt">{{item.brandTxt}}</view>
+                      </view>
+                      <image class="goHui" src="../../images/goHui.png"></image>
+                  </view>
+                  <view class="bpUl">
+                      <view wx:for="{{item.brandPd}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx" class="bpLi">
+                        <view class="bpImgBox">
+                          <image src="{{navItem.bpImg}}" class="bpImg" mode="widthFix"></image>
+                        </view>
+                        <view class="bpInfo">{{navItem.bpInfo}}</view>
+                        <view class="bpPrice" wx:if="{{flag==false}}">
+                            <text class="price">¥</text>
+                            {{navItem.bpPrice}}
+                        </view>
+                    </view>
+                  </view>
+                  <image class="share" src="../../images/share.png"></image>
+               </view>
+         </view>
+    </view>
+    <view class="warpperBox">
+        <image src="../../images/yxJp.png" class="tuanZp" mode="heightFix"></image>
+        <image src="../../images/yxJp2.png" class="dontMt" mode="heightFix"></image>
+    </view>
+    <view class="warpperBox">
+      <view class="ulTag">
+              <view class="liTag" wx:for="{{jpList}}" wx:key="index">
+                    <view class="productImg">
+                        <image src="{{item.productImg}}" mode="aspectFill" bindload="imageLoad" data-index="{{ index }}"
+      style="width:{{ imageList[index].width }}rpx; height:{{ imageList[index].height }}rpx;"></image>
+                    </view>
+                    <view class="productTitle">{{item.productTitle}}</view>
+                    <view class="productDetail">
+                       <div class="productPrice"><text class="price">¥</text>{{item.productPrice}}</div>
+                       <div class="productSale">已售{{item.productSale}}件</div>
+                    </view>
+                    <view class="barLine">
+                       <view class="productPrecent" style="width:{{item.productPrecent}}"></view>
+                       <view class="barTxt">{{item.productTxt}}</view>
+                    </view>
+            </view>
+        </view>
+    </view>
+    <image src="../../images/noMore.png" class="noMore"></image>
+</scroll-view>
+<image wx:if="{{visual}}" src="../../images/Go.png" class="go_top" bindtap="scrollToTop" />
